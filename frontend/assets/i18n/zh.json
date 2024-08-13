@@ -1,0 +1,149 @@
+{
+	"yakuman": {
+		"recent": "最近",
+		"attained": "役満",
+		"byType": "按类型"
+	},
+	"viewOnMajsoul": "查看雀魂牌谱",
+	"riggedGame": "线下比赛",
+	"backToSummary": "返回首页",
+	"title": {
+		"contest": {
+			"list": "大鸭鸭 比赛一览",
+			"page": {
+				"generic": "大鸭鸭 比赛",
+				"specific": "大鸭鸭 比赛・{{title}}"
+			},
+			"sessions": {
+				"generic": "大鸭鸭 比赛",
+				"specific": "大鸭鸭 比赛・{{title}}"
+			}
+		}
+	},
+	"tourney": {
+		"allPlayers": "全员",
+		"scoreType": {
+			"combined": "合计顺位",
+			"cumulative": "累计点数上位",
+			"consecutive": {
+				"best": "最高连续精算点",
+				"worst": "最低连续精算点"
+			},
+			"kans": "杠",
+			"gacha": "ガチャ"
+		}
+	},
+	"stats": {
+		"terminology": {
+			"riichi": "立直",
+			"open": "副露",
+			"dama": "默听"
+		},
+		"overall": {
+			"tabTitle": "总和",
+			"graph": {
+				"wins": "和牌率",
+				"draws": "流局率",
+				"dealins": "放铳率",
+				"other": "其他"
+			},
+			"details": {
+				"totalGames": "半庄总数",
+				"averageRank": "平均顺位",
+				"averageShanten": "平均配牌向听"
+			}
+		},
+		"wins": {
+			"tabTitle": "和牌"
+		},
+		"dealins": {
+			"tabTitle": "放铳",
+			"detailsTitleMain": "自家手牌",
+			"detailsTitleSecondary": "他家手牌"
+		},
+		"riichi": {
+			"tabTitle": "立直",
+			"detailsTitleMain": "立直结果",
+			"graph": {
+				"won": "立直和率",
+				"dealin": "铳率",
+				"tsumo": "他家和牌",
+				"draw": "流局"
+			},
+			"details": {
+				"riichiRate": "立直率",
+				"uraPerRiichi": "平均里宝牌数",
+				"riichiWithUra": "立直中里宝率",
+				"ippatsuRate": "一发率",
+				"firstRiichi": "先制立直率",
+				"chaseRiichi": "追立率",
+				"riichiChased": "被追立率"
+			}
+		},
+		"calls": {
+			"tabTitle": "副露",
+			"graph": {
+				"callRate": "副露率",
+				"riichiRate": "立直率",
+				"closed": "其他"
+			},
+			"details": {
+				"totalCallRate": "鸣牌几率",
+				"kans": "杠"
+			}
+		}
+	},
+	"footer": {
+		"home": "首页",
+		"4chan": "大鸭鸭TV",
+		"repo": "雀圣屋",
+		"source": "碳基生物",
+		"contests": "大会一览"
+	},
+	"league": {
+		"graph": {
+			"start": "开幕"
+		},
+		"sessions": {
+			"selected": "已选轮次",
+			"current": "本轮比赛",
+			"next": "下轮比赛",
+			"recent": "最近比赛",
+			"more": "查看赛程"
+		}
+	},
+	"session": {
+		"matches": "参战队伍",
+		"games": "比赛",
+		"timeInZone": "{{zone}} {{time}}"
+	},
+	"time": {
+		"general": {
+			"lastDay": "[昨日]LT",
+			"sameDay": "[今日]LT",
+			"nextDay": "[明日]LT",
+			"lastWeek": "l LT",
+			"nextWeek": "l LT"
+		},
+		"countdown": {
+			"sameDay": {
+				"after": "[距离开始还有]H:mm:ss",
+				"before": "H:mm:ss[前已开始]"
+			},
+			"lastDay": {
+				"greaterThanDay": "D[天]H:mm:ss[前已开始]",
+				"withinDay": "H:mm:ss[前已开始]"
+			},
+			"nextDay": {
+				"greaterThanDay": "[距离开始还有]D[天]H:mm:ss",
+				"withinDay": "[距离开始还有]H:mm:ss"
+			},
+			"lastWeek": "l [已开始]",
+			"nextWeek": "l LT[后开始]",
+			"sameElse": {
+				"after": "l [后开始]",
+				"before": "l [已开始]"
+			}
+		}
+	}
+}

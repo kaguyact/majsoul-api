@@ -58,9 +58,9 @@ function findSupportedLocale(): string {
 	return loc;
 }
 
-export function setDayjsLocale(locale?: "ja" | "en") {
-	const loc = locale == "en" ? findSupportedLocale() : dayjs.locale("ja");
-	const calendarLocale = loc === "ja" ? "ja" : "en";
+export function setDayjsLocale(locale?: "zh" | "en") {
+	const loc = locale == "en" ? findSupportedLocale() : dayjs.locale("zh");
+	const calendarLocale = loc === "zh" ? "zh" : "en";
 
 	dayjs.updateLocale(loc, {
 		calendar: {
@@ -74,4 +74,4 @@ export function setDayjsLocale(locale?: "ja" | "en") {
 	});
 }
 
-setDayjsLocale("ja");
+setDayjsLocale("zh");

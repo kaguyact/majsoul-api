@@ -9,6 +9,13 @@ services:
       - ingress_link
       - default
     image: majsoul-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - /etc/letsencrypt/live/mj.dayaya.moe/fullchain.pem:/dist/fullchain.pem
+      - /etc/letsencrypt/live/mj.dayaya.moe/privkey.pem:/dist/privkey.pem
 
   riichi-connector:
     build:

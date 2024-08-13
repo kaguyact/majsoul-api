@@ -9,14 +9,14 @@
 	"backToSummary": "Back to Summary",
 	"title": {
 		"contest": {
-			"list": "/mjg/ competitions",
+			"list": "Dayaya competitions",
 			"page": {
-				"generic": "/mjg/ competitions",
-				"specific": "/mjg/ competitions - {{title}}"
+				"generic": "Dayaya competitions",
+				"specific": "Dayaya competitions - {{title}}"
 			},
 			"sessions": {
-				"generic": "/mjg/ competitions",
-				"specific": "/mjg/ competitions - {{title}}"
+				"generic": "Dayaya competitions",
+				"specific": "Dayaya competitions - {{title}}"
 			}
 		}
 	},
@@ -97,9 +97,9 @@
 	},
 	"footer": {
 		"home": "Home",
-		"4chan": "/mjg/",
-		"repo": "Repo",
-		"source": "Source Code/Report Issue",
+		"4chan": "Cyber TV",
+		"repo": "雀圣屋",
+		"source": "碳基生物",
 		"contests": "Contests"
 	},
 	"league": {
@@ -112,8 +112,7 @@
 			"next": "Next Session",
 			"recent": "Recent Session",
 			"more": "View Schedule"
-		},
-		"allTeams": "All Teams"
+		}
 	},
 	"session": {
 		"matches": "Matches",

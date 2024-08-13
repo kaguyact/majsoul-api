@@ -286,17 +286,17 @@ function Footer() {
 			<Link className="text-dark" to="/" >{t("footer.home")}</Link>
 		</Col>
 		<Col md="auto">
-			<a className="text-dark" href="https://boards.4channel.org/vg/catalog#s=mjg">
+			<a className="text-dark" href="https://tv.dayaya.moe/">
 				{t("footer.4chan")}
 			</a>
 		</Col>
 		<Col md="auto">
-			<a className="text-dark" href="https://repo.riichi.moe/">
+			<a className="text-dark" href="https://qm.qq.com/q/BQ3MroTTYO">
 				{t("footer.repo")}
 			</a>
 		</Col>
 		<Col md="auto">
-			<a className="text-dark" href="https://github.com/riichinomics/majsoul-api">
+			<a className="text-dark" href="https://qm.qq.com/q/alePLcAm8E">
 				{t("footer.source")}
 			</a>
 		</Col>
@@ -307,12 +307,12 @@ function Footer() {
 		</Col>
 		<Col md="auto">
 			<div className={clsx("text-dark", styles.linkDark, styles.linkUnderline)} onClick={() => {
-				const nextLocale = i18n.language === "ja" ? "en" : "ja";
+				const nextLocale = i18n.language === "zh" ? "en" : "zh";
 				i18n.changeLanguage(nextLocale);
 				saveLocale(nextLocale);
 				setDayjsLocale(nextLocale);
 			}}>
-				{i18n.language === "ja" ? "English" : "日本語"}
+				{i18n.language === "zh" ? "English" : "中文"}
 			</div>
 		</Col>
 	</Row>;
