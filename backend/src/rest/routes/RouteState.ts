@@ -617,10 +617,6 @@ export class RouteState {
 					currentSequence: [],
 				};
 
-				if (playerData.totalMatches >= maxGames) {
-					continue;
-				}
-
 				playerData.totalMatches++;
 				const score = next.finalScore[seat].uma;
 				playerData.currentSequence.push({

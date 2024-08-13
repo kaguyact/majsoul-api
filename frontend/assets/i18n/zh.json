@@ -110,7 +110,8 @@
 			"next": "下轮比赛",
 			"recent": "最近比赛",
 			"more": "查看赛程"
-		}
+		},
+		"allTeams": "所有队伍"
 	},
 	"session": {
 		"matches": "参战队伍",
