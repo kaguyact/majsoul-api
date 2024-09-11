@@ -48,6 +48,8 @@ services:
     image: mongo:4.2
     hostname: riichi-mongo
     command: ["--replSet", "main", "--bind_ip_all"]
+    ports:
+      - 27017:27017
     volumes:
       - mongo-db-data:/data/db
     secrets:

@@ -7,7 +7,7 @@ import { i18n } from "../init/i18n";
 
 const calendarSetting: Record<string, object> = {
 	en: createCountdownCalendarSettings("en"),
-	ja: createCountdownCalendarSettings("ja"),
+	zh: createCountdownCalendarSettings("zh"),
 };
 
 function createCountdownCalendarSettings(locale: string) {
