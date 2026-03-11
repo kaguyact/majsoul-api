@@ -10,12 +10,9 @@ services:
       - default
     image: majsoul-nginx
     ports:
-      - "80:80"
-      - "443:443"
+      - "8008:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - /etc/letsencrypt/live/mj.dayaya.moe/fullchain.pem:/dist/fullchain.pem
-      - /etc/letsencrypt/live/mj.dayaya.moe/privkey.pem:/dist/privkey.pem
 
   riichi-connector:
     build:
@@ -49,7 +46,7 @@ services:
     hostname: riichi-mongo
     command: ["--replSet", "main", "--bind_ip_all"]
     ports:
-      - 27017:27017
+      - 27018:27017
     volumes:
       - mongo-db-data:/data/db
     secrets:
