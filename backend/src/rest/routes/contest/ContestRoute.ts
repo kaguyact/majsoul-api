@@ -758,7 +758,7 @@ export const contestRoute: Route<RouteState> = {
 						.limit(Math.min(last, 64));
 				}
 			} else {
-				cursor.limit(64);
+				cursor.sort({ end_time: -1 });
 			}
 
 			try {
@@ -1198,6 +1198,7 @@ export const contestRoute: Route<RouteState> = {
 						projection: {
 							_id: true,
 							nickname: true,
+							majsoulId: true,
 							displayName: true,
 						},
 						sort: {
@@ -1385,7 +1386,7 @@ export const contestRoute: Route<RouteState> = {
 			.patch<any, { id: string }, StoreContest<ObjectId>>("/contests/:id",
 				roles(["root"]),
 				param("id").isMongoId(),
-				body(nameofContest("majsoulFriendlyId")).not().isString().bail().isInt({ min: 100000, lt: 1000000 }).optional({ nullable: true }),
+				body(nameofContest("majsoulFriendlyId")).not().isString().bail().isInt({ min: 1000, lt: 1000000 }).optional({ nullable: true }),
 				body(nameofContest("spreadsheetId")).isString().bail().optional({ nullable: true }),
 
 				body(nameofContest("type")).not().isString().bail().isNumeric().isWhitelisted(Object.keys(ContestType)).optional(),

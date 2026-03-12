@@ -31,9 +31,11 @@ export class MajsoulApi {
 		const pbDef = await MajsoulApi.getRes<any>(majsoulUrl + `${pbVersion}/res/proto/liqi.json`);
 		const config = await MajsoulApi.getRes<any>(majsoulUrl + `${resInfo.res["config.json"].prefix}/config.json`);
 		const ipDef = config.ip.filter((x) => x.name === "player")[0];
-		const serverListUrl = (ipDef.region_urls.mainland
-			|| ipDef.region_urls[0].url) + "?service=ws-gateway&protocol=ws&ssl=true";
+		//const serverListUrl = (ipDef.region_urls.mainland
+		//	|| ipDef.region_urls[0].url) + "?service=ws-gateway&protocol=ws&ssl=true";
+		const serverListUrl = (ipDef.gateways[0].url) + "/api/clientgate/routes?service=ws-gateway&protocol=ws&ssl=true";
 		const serverList = await MajsoulApi.getRes<any>(serverListUrl);
+		
 		if (serverList.maintenance) {
 			console.log("Maintenance in progress");
 			return;
@@ -41,7 +43,7 @@ export class MajsoulApi {
 		return {
 			version: versionInfo.version,
 			pbVersion,
-			serverList: serverList,
+			serverList: {servers: serverList.data.routes.map(route => route.domain)},
 			protobufDefinition: pbDef
 		};
 	}
@@ -58,6 +60,7 @@ export class MajsoulApi {
 		this.protobufRoot = Root.fromJSON(apiResources.protobufDefinition);
 		this.clientVersion = `web-${apiResources.version.slice(0, -2)}`;
 		console.log(`Client version: [${this.clientVersion}]`);
+		console.log(apiResources.serverList);
 		this.codec = new Codec(this.protobufRoot);
 		const serverIndex = Math.floor(Math.random() * apiResources.serverList.servers.length);
 		this.connection = new Connection(`wss://${apiResources.serverList.servers[serverIndex]}/gateway`);

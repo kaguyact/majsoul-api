@@ -286,17 +286,17 @@ function Footer() {
 			<Link className="text-dark" to="/" >{t("footer.home")}</Link>
 		</Col>
 		<Col md="auto">
-			<a className="text-dark" href="https://tv.dayaya.moe/">
+			<a className="text-dark" href="https://tv.dayaya.net/">
 				{t("footer.4chan")}
 			</a>
 		</Col>
 		<Col md="auto">
-			<a className="text-dark" href="https://qm.qq.com/q/BQ3MroTTYO">
+			<a className="text-dark" href="https://bbs.dayaya.net/">
 				{t("footer.repo")}
 			</a>
 		</Col>
 		<Col md="auto">
-			<a className="text-dark" href="https://qm.qq.com/q/alePLcAm8E">
+			<a className="text-dark" href="https://dayaya.net/">
 				{t("footer.source")}
 			</a>
 		</Col>
